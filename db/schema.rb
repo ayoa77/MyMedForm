@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331185943) do
+ActiveRecord::Schema.define(version: 20170410125043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "medforms", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "country"
+    t.string   "postal_code"
+    t.string   "phone"
+    t.string   "birth_date"
+    t.string   "primary_language"
+    t.integer  "gender"
+    t.string   "medications"
+    t.string   "allergies"
+    t.string   "hospitilisations"
+    t.string   "conditions"
+    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "form_name"
+    t.string   "id_string"
+    t.string   "description"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

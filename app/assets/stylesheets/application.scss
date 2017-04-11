@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.medred-text {
+  color: rgba(233, 68, 68, 1);
+}
+
+.medred-background {
+  background-color: rgba(233, 68, 68, 1);
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+
+}
+
+.medred-border { height: auto;
+  border-bottom: 4px solid rgba(233, 68, 68, 1);
+}
