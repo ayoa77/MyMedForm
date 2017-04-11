@@ -1,0 +1,112 @@
+<div class="container1">
+
+    <div class="row">
+        <div class="col-sm-6 col-md-12">
+            <div class="thumbnail">
+
+                <%= form_for [@user, @medform] do |form| %>
+                <div class="text-field">
+                    <%= form.label :first_name %>
+                    <%= form.text_field :first_name, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label :last_name %>
+                    <%= form.text_field :last_name, class: "form-control" %>
+                </div>
+                <div class="text-area">
+                    <%= form.label "Identification number - SSN or a passport number" %>
+                    <%= form.text_field :id_string, class: "form-control" %>
+                </div>
+                <div class="text-field">
+                    <%= form.label :address %>
+                    <%= form.text_field :address, class: "form-control" %>
+
+                </div>
+                <div class="text-field">
+                    <%= form.label :city %>
+                    <%= form.text_field :city, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label :country %>
+                    <%= form.text_area :country, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%=form.label :postal_code %>
+                    <%=form.text_area :postal_code, class: "form-control" %>
+
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "phone number." %>
+                    <%= form.phone_field :phone, class: "form-control" %>
+                </div>
+
+                <div class="date-field">
+                    <%= form.label :birth_date%>
+                    <%= form.date_field :birth_date, class: "form-control" %>
+                </div>
+                <%= form.label :gender %>
+                <div class="text-field form-control">
+
+                    <%= form.label :female %>
+                    <%= form.radio_button :gender, value: "female" %>
+                    <%= form.label :male %>
+                    <%= form.radio_button :gender, value: "male"  %>
+                    <%= form.label :other %>
+                    <%= form.radio_button :gender, value: "other"  %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "Which language do you prefer?
+                        Your caretaker will provide you with a translator where applicable and possible." %>
+                    <%= form.text_area :primary_language, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "List any medications that you are currently taking." %>
+                    <%= form.text_area :medications, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "List any allergies here, especially allergies to any medications." %>
+                    <%= form.text_area :allergies, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "Please tell us about any previous hospitilisations - including, but not limited to, surgeries and emergency room visits." %>
+                    <%= form.text_area :hospitilisations, class: "form-control" %>
+                </div>
+
+                <div class="text-field">
+                    <%= form.label "Are there any other conditions that you could benefit from telling your medical practitioner about? If so, list them here." %>
+                    <%= form.text_area :phone, class: "form-control" %>
+                </div>
+
+                <div class="hidden-field">
+                    <%= form.hidden_field :form_name, :value => "Overview"%>
+                </div>
+                <div class="hidden-field">
+                    <%= form.hidden_field :description, :value => "This is your supplementary medical check-up/check-in form. Every 6 months and before a doctors visit, this form should be updated."%>
+                </div>
+
+                <div class="file-field">
+                    <%= form.label "You can upload an image of yourself to aid in the security of your account."  %>
+                    <%= form.file_field :avatar, class: "form-control" %>
+                </div>
+                <br>
+                <div class="submit-field">
+                    <%= form.submit %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><%=link_to "Home", users_path(current_user)%><br>
+
+</div>
+</div>

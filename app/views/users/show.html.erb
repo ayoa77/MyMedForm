@@ -1,0 +1,4 @@
+<% @forms.each do |form| %>
+<%= link_to user_form_path(@user, form) do%>
+<p class="padding"><%=image_tag form.image.thumb.url %></p>
+<% end %>
