@@ -1,6 +1,7 @@
-class PatientsController < Devise::SessionsController
+class PatientsController < ApplicationController
   def show
-    @patient = Patient.find(params[:id])
-    @medforms = Medform.where(user_id: @patient.id)
+  end
+  def new
+redirect_to new_patient_session_path
   end
 end
