@@ -1,3 +1,3 @@
 class Medform < ApplicationRecord
-  belongs_to :user, :dependent => :destroy
+  belongs_to :patient, :dependent => :destroy
 end
